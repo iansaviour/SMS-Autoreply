@@ -18,6 +18,32 @@ Module MainModule
     '=============================================================================================================
     ' Modul Umum
     '=============================================================================================================
+    Function ask_msgbox(ByVal question As String)
+        Dim confirm As DialogResult
+        confirm = XtraMessageBox.Show(question, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
+        If confirm = DialogResult.Yes Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Sub errorCustom(ByVal err_msg As String)
+        XtraMessageBox.Show(err_msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    End Sub
+
+    Sub stopCustom(ByVal stop_msg As String)
+        XtraMessageBox.Show(stop_msg, "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+    End Sub
+
+    Sub infoCustom(ByVal info_msg As String)
+        XtraMessageBox.Show(info_msg, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Sub warningCustom(ByVal warning_msg As String)
+        XtraMessageBox.Show(warning_msg, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+    End Sub
+
     Private Sub Delay(ByVal dblSecs As Double)
         Const OneSec As Double = 1.0# / (1440.0# * 60.0#)
         Dim dblWaitTil As Date

@@ -10,8 +10,6 @@ Public Class FormMemberKontak
         load_kontak()
     End Sub
     Sub load_kontak()
-        id_grup_kontak = FormGrupKontak.GVGrupKontak.GetFocusedRowCellValue("id_grup_kontak").ToString
-
         Dim query As String = ""
 
         If id_pop_up = "1" Then
@@ -54,13 +52,12 @@ Public Class FormMemberKontak
 
         Dim query As String
         Try
-            query = "DELETE FROM tb_grup_kontak_member WHERE id_grup_kontak='" & id_grup_kontak & "'"
-            execute_non_query(query, True, "", "", "", "")
-
             For i As Integer = 0 To GVKontak.RowCount - 1
-                query = "INSERT INTO tb_grup_kontak_member(id_grup_kontak,id_kontak) VALUES('" & id_grup_kontak & "','" & LBMemberGrup.CheckedItems.Item(i).ToString & "')"
+                query = "INSERT INTO tb_grup_kontak_member(id_grup_kontak,id_kontak) VALUES('" & id_grup_kontak & "','" & GVKontak.GetRowCellValue(i, "id_kontak").ToString & "')"
                 execute_non_query(query, True, "", "", "", "")
             Next
+
+            FormGrupKontak.show_member(id_grup_kontak)
 
             Me.Close()
             Me.Dispose()

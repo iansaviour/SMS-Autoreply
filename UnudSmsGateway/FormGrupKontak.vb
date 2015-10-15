@@ -87,4 +87,14 @@ Public Class FormGrupKontak
             e.DisplayText = (e.RowHandle + 1).ToString()
         End If
     End Sub
+
+    Private Sub BDeleteMember_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BDeleteMember.Click
+        If ask_msgbox("Apakah anda yakin ingin menghapus member ini dari grup ?") Then
+            Dim id_kontak As String = GVKontak.GetFocusedRowCellValue("id_kontak").ToString
+            Dim id_grup_kontak As String = GVGrupKontak.GetFocusedRowCellValue("id_grup_kontak").ToString
+
+            Dim query As String = "DELETE FROM tb_grup_kontak_member WHERE id_grup_kontak='" + id_grup_kontak + "' AND id_kontak='" + id_kontak + "'"
+            execute_non_query(query, True, "", "", "", "")
+        End If
+    End Sub
 End Class
