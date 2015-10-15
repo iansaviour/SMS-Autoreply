@@ -24,8 +24,14 @@ id_sms,output_sms
 
 - change
 - tb_grup_kontak_member
++ tb_event
++ tb_event_meta
++ tb_event_do
 
 WORK :
 
 V delete and new kontak
-scheduler master
+- scheduler master
+- scheduler ada tiga bagian :
+nama event deskripsi dkk, event looping timenya pisah (schedule), eventnya yang mau dikerjakan (SMS, nomor yang dituju)
+- satuin punya catur

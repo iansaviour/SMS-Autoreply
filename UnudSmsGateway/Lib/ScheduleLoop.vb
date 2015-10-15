@@ -28,7 +28,7 @@
         query += " (repeat_weekday = '" + _weekday + "' OR repeat_weekday = '*' )"
         query += " AND repeat_start <= UNIX_TIMESTAMP('" + now_date_mysql + "'))"
 
-        Console.WriteLine(convert_second("1.00:00:00").ToString)
+        'Console.WriteLine(convert_second("1.00:00:00").ToString)
     End Sub
     Function GetWeekNumberOfMonth(ByVal _date As DateTime) As Integer
         _date = _date.Date

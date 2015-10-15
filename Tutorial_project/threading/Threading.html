@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://support.microsoft.com/en-us/kb/315577 -->
+<html ng-app="SelfAssistWeb" ng-controller="PageController" dir="ltr" class="ng-scope" hola_ext_inject="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" charset="UTF-8" src="./Threading_files/meCore.min.js"></script><script async="" charset="UTF-8" src="./Threading_files/meBoot.min.js"></script><link rel="stylesheet" type="text/css" href="./Threading_files/me.min.css"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="ms.refView" content="https://support.microsoft.com/en-us/kb/315577">
+    <meta name="ms.pageType" content="https://support.microsoft.com/en-us/kb/315577">
+    <meta name="ms.Nav1" content="">
+    <meta name="ms.auth" content="1">
+    <meta name="ms.ssversion" content="200">
+    <meta name="ms.flightId" content="chat-audioalert-1|chat-lineposition-1|telemetry_partnerid_1">
+    <meta name="ms.cV" content="ud7RKS/PMfM4T7Q5.0">
+    <meta name="ms.muid" content="22F567D793106F3D0BA9602D97106C0C">
+
+    <!-- ngIf: noIndex -->
+    <!--<base href="/">--><base href=".">
+    <title ng-bind="title" class="ng-binding">Microsoft Support</title>
+
+    <link href="https://www.microsoft.com/favicon.ico?v2" rel="shortcut icon">
+    <link rel="canonical" ng-href="https://support.microsoft.com/en-us/kb/315577" href="./Threading_files/Threading.html">
+
+    <link rel="stylesheet" type="text/css" href="./Threading_files/WebCore.4.1.0.ltr.light.min.css">
+    <link href="./Threading_files/css" rel="stylesheet">
+
+
+
+    <link href="./Threading_files/print" rel="stylesheet" type="text/css" media="print">
+
+ 
+
+<link href="./Threading_files/shell.min.css" rel="stylesheet" type="text/css">
+
+<!--[if lte IE 8]>
+    <link href="https://assets.onestore.ms/cdnfiles/onestorerolling-1510-13010/shell/common/respond-proxy.html" id="respond-proxy" rel="respond-proxy"/>
+<![endif]-->
+    <!-- assembly version 9.0.15285.1, built on 10/13/2015 10:55:12 AM -->
+<meta name="description" content="In Visual Basic .NET, you can write multithreaded applications. This article demonstrates how a simple Visual Basic .NET or Visual Basic 2005 application can create and manage threads."><meta name="Search.Description" content="In Visual Basic .NET, you can write multithreaded applications. This article demonstrates how a simple Visual Basic .NET or Visual Basic 2005 application can create and manage threads."><meta name="Search.KBParents" content="10911 7796 1105 5563 2965 5562 2964"><meta name="Search.DateModified" content="12/6/2006 11:18:59 PM"><meta name="Search.ContentType" content="kb"><meta name="Search.Products" content="375829 36659 36658"><meta name="keywords" content="kbvs2005swept kbvs2005applies kbhowtomaster KB315577"><meta name="Search.Keywords" content="kbvs2005swept kbvs2005applies kbhowtomaster KB315577"></head>
+<body ng-class="isMobile ? &#39;mobile&#39; : &#39;desktop&#39;" class="desktop">
+    
+
+
+    
+<!-- Style for error content in the case that css + js files fail to download -->
+<style type="text/css">
+    .ng-hide .error-content {
+        display: none;
+        text-align: center;
+        font-family: 'Segoe UI';
+        padding-bottom: 12px;
+    }
+
+    .error-content h2 {
+        margin-top: 8px;
+        margin-bottom: 24px;
+        color: black;
+    }
+</style>
+
+<!-- Downloads the Microsoft.Support.Web.Mvc.Config object from the server -->
+<script type="text/javascript" src="./Threading_files/clientconfig"></script>
+
+<!--“Third party scripts or code, linked to, called or referenced from this web site, online service or product, are licensed to you by the third parties that own such code, not by Microsoft, see ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx.”-->
+<script src="./Threading_files/jquery"></script>
+
+<script src="./Threading_files/jslibraries"></script>
+
+<script src="./Threading_files/application"></script>
+
+<script src="./Threading_files/bootstrap"></script>
+
+
+
+<script type="text/javascript">
+    if (!window.angular) {
+        document.onreadystatechange = function () {
+            if (document.readyState == "complete") {
+                document.getElementById('error500').style.display = "block";
+            }
+        }
+    }
+</script>
+<iframe id="silent-signin-frame" ng-src="/api/content/silentauth" tabindex="-1" aria-hidden="true" src="./Threading_files/silentauth.html"></iframe>
+
+<!-- ngIf: !online -->
+
+
+    <!-- ngIf: alertBanner -->
+
+ 
+<!--[if lte IE 8]>
+    <script src="https://assets.onestore.ms/cdnfiles/onestorerolling-1510-13010/shell/common/js/shell_ie8.js"></script>
+<![endif]-->
+
+
+
+<script src="./Threading_files/meversion"></script>
+<script src="./Threading_files/shellservice.v1_2.min.js"></script>
+
+<script src="./Threading_files/blender.js"></script>
+    <!--Angular 1.2 does not certain locale, so we map to a locale that angular support until we upgrade to a higher version -->
+
+    <script src="./Threading_files/angular-locale_en-us.js"></script>
+            
+        <div ng-controller="L0HeaderController" class="ng-scope"></div>
+ 
+
+
+
+
+<div id="shell-header" class="shell-rwd  shell-header " lang="en">
+    <div class="shell-header-wrapper">
+        <div class="shell-header-top" data-bi-area="HeaderL0" data-bi-view="L0V1">
+            <div class="shell-header-topfix">
+                <div class="shell-header-brand">
+                    <a id="srv_shellHeaderMicrosoftLogo" href="https://www.microsoft.com/" title="Microsoft" data-bi-name="BrandLogo">
+                        <img src="./Threading_files/microsoft.png" alt="Microsoft">
+                    </a>
+                </div>
+
+                <ul class="shell-header-toggle">
+                                            <li>
+                            <a href="https://www.microsoftstore.com/store/msusa/en_US/DisplayThreePgCheckoutShoppingCartPage" class="shell-header-toggle-cart" title="Cart" data-bi-name="Toggle Cart">
+                                <i id="toggle-shell-icon-cart" class="shell-icon-cart"></i>
+                            </a>
+                        </li>
+                    <li>
+                        <button class="shell-header-toggle-menu" type="button" data-bi-name="Toggle Menu">
+                            <i class="shell-icon-menu"></i>
+                        </button>
+                    </li>
+                </ul>
+
+                    <div class="shell-header-subtitle shell-header-mtop">
+                        <span class="shell-header-vertical-bar"></span>
+                        <a href="https://support.microsoft.com/" data-bi-name="Segment Title">Support</a>
+                    </div>
+            </div>
+            <div class="shell-header-actions">
+                
+                    <div class="shell-header-cart">
+                        <a href="https://www.microsoftstore.com/store/msusa/en_US/DisplayThreePgCheckoutShoppingCartPage" title="Cart" data-bi-name="Shopping Cart">
+                            <i class="shell-icon-cart"></i>
+                            <span class="sr-only">Cart</span>
+                            <span id="shopping-cart-amount"></span>
+                        </a>
+                    </div>
+
+                <dl class="shell-header-user">
+                    <dt>
+                        <span id="meControl"><div class="msame_Header" tabindex="0"><div class="msame_Header_name msame_TxtTrunc">Septian</div><div class="msame_Header_pic"><div class="msame_Header_piccont"><div class="msame_Header_picframe"><img role="presentation" src="./Threading_files/bluemanmxxl.png"></div></div></div><div class="msame_Header_chev"></div></div></span>
+                    </dt>
+                </dl>
+            </div>
+
+                <div class="shell-header-subtitle shell-header-dtop">
+                    <span class="shell-header-vertical-bar"></span>
+                    <a href="https://support.microsoft.com/" data-bi-name="Segment Title">Support</a>
+                </div>
+
+        </div>
+
+        <ul class="shell-header-nav" id="srv_shellHeaderNav" data-bi-area="L1" data-bi-view="Hovermenus">
+
+        </ul>
+
+
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+
+    var shellInitOptions = {
+        lcaDisclaimerEnabled: false,
+        suggestedProductTitle : 'Suggested products'
+    };
+
+    
+    var meControlInitOptions = {
+        containerId: 'meControl',
+        custom: {chevHtml:'<i class="msame_chev_uhf shell-icon-dropdown"></i>'},
+
+        
+
+            
+        mobileBreakpoints:
+    {
+        shortHeader: 1084,
+        mobile: 540
+        },
+        
+
+        rpData:
+        {
+            msaInfo:
+                {
+                        
+                    signInUrl: 'SMC-Sign-In-URL',
+                    signOutUrl: 'SMC-Sign-Out-URL',
+                    accountSettingsUrl: 'https://account.microsoft.com/',
+                    switchUrl: '',
+                    meUrl: 'https://login.live.com/me.srf?wa=wsignin1.0',
+                    isSupported: true
+                    
+                },
+            aadInfo:
+                {
+                },
+            preferredIdp: 'msa',
+        },
+        signInText: 'Sign In',
+        signOutText: 'Sign Out'
+    };
+</script>
+ 
+    
+    <div comscore=""><script src="./Threading_files/broker.js" async="async" type="text/javascript"></script></div>
+
+    <!-- ngInclude: '/PartialViews/Search/SearchContainer.html' --><div ng-include="&#39;/PartialViews/Search/SearchContainer.html&#39;" class="ng-scope"><div id="search-box" ng-controller="SearchController" class="ng-scope">
+    <div virtual-agent-dialog="" view="view.virtualAgentDialog" ng-show="isInVirtualAgentFlight" class="ng-isolate-scope ng-hide" aria-hidden="true">
+<div class="virtual-agent-container jumbotron" ng-class="{&#39;dialog-active&#39;: isDialogActive}">
+    <div class="virtual-agent-wrapper">
+        <div class="virtual-agent-dialog invisible-scrollbar" auto-scroll-content="" data-speed="500">
+            <div class="virtual-agent-prompt clearfix">
+                <div class="form-group" ng-show="!isDialogActive" aria-hidden="false">
+                    <form class="search-form bubble-content bubble-left ng-pristine ng-valid" ng-submit="startVirtualAgent()" ng-class="{&#39;focused-form&#39;: isDialogInputFocused}">
+                        <input id="virtual-agent-initial-query" class="form-control win-color-bg-20 text-header virtual-agent-padded-content ng-pristine ng-valid" type="text" autocomplete="off" ng-attr-placeholder="{{ view.placeholder }}" ng-model="initialQuery" ng-blur="isDialogInputFocused = false" ng-focus="isDialogInputFocused = true" tabindex="0" placeholder="What can I help you with?" aria-invalid="false">
+                        <span class="search-icon" ng-click="startVirtualAgent()" ng-show="!isDialogActive" tabindex="0" aria-hidden="false">
+                            <i class="win-icon win-icon-Send"></i>
+                        </span>
+                    </form>
+                </div>
+                <div class="win-color-bg-0 text-header initial-message bubble-content ng-hide" ng-show="isDialogActive" ng-class="{&#39;text-subtitle&#39;: isDialogActive}" aria-hidden="true">
+                    <div class="user-message ng-binding">
+                        
+                    </div>
+                </div>
+                <div ng-show="!isDialogActive" class="text-subtitle text-center win-color-fg-primary color-alt spacer-16-top ng-binding" aria-hidden="false"> Try "How do I reset my password?" </div>
+            </div>
+            <div class="virtual-agent-messages-container">
+                <!-- ngRepeat: message in messages -->
+            </div>
+        </div>
+        <div class="virtual-agent-input invisible-scrollbar ng-hide" ng-show="isDialogActive" aria-hidden="true">
+            <!-- ngIf: isSearching -->
+            <div class="form-group form-searchbox remove-top-margin spacer-12-bottom">
+                <form ng-submit="askVirtualAgent(dialogQuery)" class="ng-pristine ng-valid">
+                    <input id="virtual-agent-dialog-query" class="form-control ng-isolate-scope ng-pristine ng-valid" type="text" autocomplete="off" ng-model="dialogQuery" focus-content="" data-name="virtual-agent-input" tabindex="0" aria-invalid="false">
+                    <span class="search-icon" ng-click="askVirtualAgent(dialogQuery)" tabindex="0">
+                        <i class="win-icon win-icon-Send"></i>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+    <div class="search-container other" ng-show="!isInVirtualAgentFlight" ng-class="{&#39;jumbotron jumbotron-centered jumbotron-search home&#39; : displayAllContent &amp;&amp; !errorStatus , &#39;other&#39; : !displayAllContent || errorStatus}" aria-hidden="false">
+        <div class="container">
+            <div class="row">
+                <div class="centering-col  col-xl-14 col-xl-offset-5 col-lg-16 col-lg-offset-4 col-md-20 col-md-offset-2 col-xs-24">
+                    <div class="centered-content">
+                        <!-- ngIf: displayAllContent && !errorStatus -->
+                        <form class="search-form ng-pristine ng-valid" novalidate="" role="form" ng-submit="primarySearchClicked();">
+                            <div class="has-feedback">
+                                <input class="form-control search-text ng-pristine ng-valid" id="search-text" type="text" ng-attr-placeholder="{{ view.searchPlaceholder }}" ng-model="userQuery" autocomplete="off" tabindex="0" placeholder="Search for support" aria-invalid="false">
+                                <span class="win-icon primary-search form-control-feedback" ng-click="primarySearchClicked();" tabindex="-1">  </span>
+                                <div class="auto-suggest-results" auto-suggest="" data-input-source="#search-text" data-input-model="userQuery"><ul ng-show="result.suggestions.length &amp;&amp; isVisible" aria-hidden="true" class="ng-hide">
+    <!-- ngRepeat: suggestion in result.suggestions --><li ng-bind-html="generateSuggestionHTML(suggestion)" ng-class="{selected: isSelected(suggestion)}" ng-repeat="suggestion in result.suggestions" ng-mousedown="searchSuggestion(suggestion)" class="ng-binding ng-scope">windows 10</li><!-- end ngRepeat: suggestion in result.suggestions --><li ng-bind-html="generateSuggestionHTML(suggestion)" ng-class="{selected: isSelected(suggestion)}" ng-repeat="suggestion in result.suggestions" ng-mousedown="searchSuggestion(suggestion)" class="ng-binding ng-scope">windows 7</li><!-- end ngRepeat: suggestion in result.suggestions --><li ng-bind-html="generateSuggestionHTML(suggestion)" ng-class="{selected: isSelected(suggestion)}" ng-repeat="suggestion in result.suggestions" ng-mousedown="searchSuggestion(suggestion)" class="ng-binding ng-scope">windows 8.1</li><!-- end ngRepeat: suggestion in result.suggestions --><li ng-bind-html="generateSuggestionHTML(suggestion)" ng-class="{selected: isSelected(suggestion)}" ng-repeat="suggestion in result.suggestions" ng-mousedown="searchSuggestion(suggestion)" class="ng-binding ng-scope">windows update</li><!-- end ngRepeat: suggestion in result.suggestions --><li ng-bind-html="generateSuggestionHTML(suggestion)" ng-class="{selected: isSelected(suggestion)}" ng-repeat="suggestion in result.suggestions" ng-mousedown="searchSuggestion(suggestion)" class="ng-binding ng-scope">microsoft</li><!-- end ngRepeat: suggestion in result.suggestions --><li ng-bind-html="generateSuggestionHTML(suggestion)" ng-class="{selected: isSelected(suggestion)}" ng-repeat="suggestion in result.suggestions" ng-mousedown="searchSuggestion(suggestion)" class="ng-binding ng-scope">microsoft support</li><!-- end ngRepeat: suggestion in result.suggestions --><li ng-bind-html="generateSuggestionHTML(suggestion)" ng-class="{selected: isSelected(suggestion)}" ng-repeat="suggestion in result.suggestions" ng-mousedown="searchSuggestion(suggestion)" class="ng-binding ng-scope">outlook</li><!-- end ngRepeat: suggestion in result.suggestions --><li ng-bind-html="generateSuggestionHTML(suggestion)" ng-class="{selected: isSelected(suggestion)}" ng-repeat="suggestion in result.suggestions" ng-mousedown="searchSuggestion(suggestion)" class="ng-binding ng-scope">phone number microsoft support</li><!-- end ngRepeat: suggestion in result.suggestions --><li ng-bind-html="generateSuggestionHTML(suggestion)" ng-class="{selected: isSelected(suggestion)}" ng-repeat="suggestion in result.suggestions" ng-mousedown="searchSuggestion(suggestion)" class="ng-binding ng-scope">contact support windows 10</li><!-- end ngRepeat: suggestion in result.suggestions --><li ng-bind-html="generateSuggestionHTML(suggestion)" ng-class="{selected: isSelected(suggestion)}" ng-repeat="suggestion in result.suggestions" ng-mousedown="searchSuggestion(suggestion)" class="ng-binding ng-scope">office 365 home</li><!-- end ngRepeat: suggestion in result.suggestions -->
+</ul>
+
+
+
+
+</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ngInclude: '/PartialViews/Search/HelpLinks.html' --><div ng-include="&#39;/PartialViews/Search/HelpLinks.html&#39;" class="ng-scope"><div class="container quick-nav ng-scope other" ng-class="{&#39;home&#39; : displayAllContent &amp;&amp; !errorStatus, &#39;other&#39; : !displayAllContent || errorStatus}">
+    <div class="row">
+        <!-- ngRepeat: quickNavLink in view.quickNavLinks --><div class="help-link ng-scope" ng-repeat="quickNavLink in view.quickNavLinks">
+            <a href="https://account.microsoft.com/?lang=en-us" ng-attr-id="{{quickNavLink.key}}" ng-href="https://account.microsoft.com/?lang=en-us" ng-click="linkClick($event, quickNavLink.key)" target="_self" tabindex="0" id="microsoft-account">
+                <span class="win-icon ng-binding" aria-hidden="true"></span>
+                <span class="text-body ng-binding">Manage my account</span>
+            </a>
+        </div><!-- end ngRepeat: quickNavLink in view.quickNavLinks --><div class="help-link ng-scope" ng-repeat="quickNavLink in view.quickNavLinks">
+            <a href="https://answers.microsoft.com/en-us" ng-attr-id="{{quickNavLink.key}}" ng-href="https://answers.microsoft.com/en-us" ng-click="linkClick($event, quickNavLink.key)" target="_self" tabindex="0" id="ask-community">
+                <span class="win-icon ng-binding" aria-hidden="true"></span>
+                <span class="text-body ng-binding">Ask the community</span>
+            </a>
+        </div><!-- end ngRepeat: quickNavLink in view.quickNavLinks --><div class="help-link ng-scope" ng-repeat="quickNavLink in view.quickNavLinks">
+            <a href="https://support.microsoft.com/#" ng-attr-id="{{quickNavLink.key}}" ng-href="#" ng-click="linkClick($event, quickNavLink.key)" target="_self" tabindex="0" id="contact-support">
+                <span class="win-icon ng-binding" aria-hidden="true"></span>
+                <span class="text-body ng-binding">Contact Answer Desk</span>
+            </a>
+        </div><!-- end ngRepeat: quickNavLink in view.quickNavLinks --><div class="help-link ng-scope" ng-repeat="quickNavLink in view.quickNavLinks">
+            <a href="https://www.microsoft.com/en-us/download/" ng-attr-id="{{quickNavLink.key}}" ng-href="https://www.microsoft.com/en-us/download/" ng-click="linkClick($event, quickNavLink.key)" target="_self" tabindex="0" id="download-center">
+                <span class="win-icon ng-binding" aria-hidden="true"></span>
+                <span class="text-body ng-binding">Find downloads</span>
+            </a>
+        </div><!-- end ngRepeat: quickNavLink in view.quickNavLinks -->
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+        <noscript>
+        &lt;div class="error-content text-center"&gt;
+            &lt;div&gt;&lt;span class="win-icon warning-symbol"&gt;&lt;/span&gt;&lt;/div&gt;
+            &lt;h4&gt; Javascript is disabled &lt;/h4&gt;
+            &lt;p&gt; Please enable javascript and refresh the page &lt;/p&gt;
+        &lt;/div&gt;
+    </noscript>
+    <!-- ngIf: errorStatus -->
+    <div class="error-content text-center text-muted ng-hide" ng-show="errorStatus" aria-hidden="true">
+        <p class="ng-binding">  ud7RKS/PMfM4T7Q5.0 </p>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-24">
+                
+<!-- ngView:  --><div ng-view="" ng-show="!errorStatus" class="ng-scope" aria-hidden="false"><div class="row ng-scope">
+    <div class="col-lg-16 col-lg-offset-4 col-md-20 col-md-offset-2">
+        <!-- ngIf: !kbArticle -->
+        <!-- ngIf: mtLoading -->
+        <section class="section kb-article spacer-84-top" compile-html="" content="kbArticle">
+            <h1 id="mt2" title="How to create threads in Visual Basic .NET or Visual Basic 2005" class="col-sm-20 title ng-scope">
+                How to create threads in Visual Basic .NET or Visual Basic 2005
+            </h1>
+            <div kb-title="" email-caption="Email" email-title="I think you&#39;d be interested in this article: {title}" email-body="{title} - {url}" print-caption="Print" title="How to create threads in Visual Basic .NET or Visual Basic 2005" class="ng-scope ng-isolate-scope"><div class="row kb-title">
+    <ul class="col-sm-4 kb-media-widget">
+        <li>
+            <a id="kb-email" translate="no" ng-href="mailto:?subject=I think you&#39;d be interested in this article: How to create threads in Visual Basic .NET or Visual Basic 2005&amp;body=How to create threads in Visual Basic .NET or Visual Basic 2005 - https://support.microsoft.com/en-us/kb/315577" class="ng-binding" href="mailto:?subject=I%20think%20you%27d%20be%20interested%20in%20this%20article:%20How%20to%20create%20threads%20in%20Visual%20Basic%20.NET%20or%20Visual%20Basic%202005&body=How%20to%20create%20threads%20in%20Visual%20Basic%20.NET%20or%20Visual%20Basic%202005%20-%20https://support.microsoft.com/en-us/kb/315577">
+                <span class="win-icon" aria-hidden="true">  </span>Email
+            </a>
+        </li>
+        <li>
+            <a id="kb-print" translate="no" href="javascript:window.print();" class="ng-binding">
+                <span class="win-icon" aria-hidden="true">  </span>Print
+            </a>
+        </li>
+    </ul>
+</div>
+
+</div><div class="kb-notice-section section ng-scope">This article was previously published under Q315577</div><div id="mt0" class="kb-summary-section section ng-scope"><div class="section-header"><h5 class="section-title">SUMMARY</h5></div>This article describes how to create threads in a Microsoft Visual Basic .NET or Microsoft Visual Basic 2005 Windows application. The <span class="text-base">System.Threading</span> namespace provides the classes that you must have to work with threads.<h3 class="sbody-h3">Requirements</h3>
+
+The following list outlines the recommended hardware, software, network infrastructure, and service packs that you need:
+
+<ul class="sbody-free_list"><li>Microsoft Windows 2000 or Microsoft Windows XP</li><li>Microsoft Visual Basic .NET or Microsoft Visual Basic 2005</li></ul>
+
+This article assumes that you are familiar with the following topics:
+
+<ul class="sbody-free_list"><li>Visual Basic .NET programming or Visual Basic 2005 programming</li><li>Visual Studio .NET or Visual Studio 2005 Integrated Development Environment (IDE)</li><li>General familiarity with delegates and threading</li><li>
+General familiarity with Visual Basic .NET or Visual Basic 2005</li></ul><h3 class="sbody-h3">Create a Visual Basic .NET or Visual Basic 2005 application with threads</h3><ol class="sbody-num_list"><li>Start Microsoft Visual Studio .NET or Microsoft Visual Studio 2005.</li><li>Create a new Visual Basic Windows Application project named ThreadWinApp.</li><li>Add a <span class="text-base">Button</span> control to the form. The button is named <span class="text-base">Button1</span> by default.</li><li>Add a <span class="text-base">ProgressBar</span> component to the form. The progress bar is named <span class="text-base">ProgressBar1</span> by default.</li><li>Right-click the form, and then click <span class="text-base">View Code</span>.</li><li>Add the following statement to the beginning of the file:<div class="sbody-code"><pre><code>
+Imports System.Threading
+					</code></pre></div></li><li>Add the following <span class="text-base">Click</span> event handler for <span class="text-base">Button1</span>:<div class="sbody-code"><pre><code>
+Private Sub Button1_Click( _
+    ByVal sender As System.Object, ByVal e As System.EventArgs) _
+    Handles Button1.Click
+
+    MessageBox.Show("This is the main thread")
+End Sub
+					</code></pre></div></li><li>Add the following variable to the <span class="text-base">Form1</span> class:<div class="sbody-code"><pre><code>
+Private trd As Thread
+					</code></pre></div></li><li>Add the following method to the <span class="text-base">Form1</span> class:
+<div class="sbody-code"><pre><code>
+Private Sub ThreadTask()
+    Dim stp As Integer
+    Dim newval As Integer
+    Dim rnd As New Random()
+
+    Do
+        stp = ProgressBar1.Step * rnd.Next(-1, 2)
+        newval = ProgressBar1.Value + stp
+        If newval &gt; ProgressBar1.Maximum Then
+            newval = ProgressBar1.Maximum
+        ElseIf newval &lt; ProgressBar1.Minimum Then
+            newval = ProgressBar1.Minimum
+        End If
+
+        ProgressBar1.Value = newval
+
+        Thread.Sleep(100)
+    Loop
+End Sub
+						</code></pre></div><span class="text-base">NOTE</span>: This is the code that underlies the thread. This code is an infinite loop that randomly increments or decrements the value in <span class="text-base">ProgressBar1</span> and then waits 100 milliseconds before it continues.</li><li>Add the following <span class="text-base">Load</span> event handler for <span class="text-base">Form1</span>. This code creates a new thread, makes the thread a background thread, and then starts the thread.<div class="sbody-code"><pre><code>
+Private Sub Form1_Load( _
+    ByVal sender As System.Object, ByVal e As System.EventArgs) _
+    Handles MyBase.Load
+
+    trd = New Thread(AddressOf ThreadTask)
+    trd.IsBackground = True
+    trd.Start()
+End Sub
+					</code></pre></div></li></ol><h3 class="sbody-h3">Verify that it works</h3><ol class="sbody-num_list"><li>Build and run the application. Notice that the value in the progress bar changes randomly. This is the new thread in operation.</li><li>To demonstrate that the main thread is independent of the thread that changes the <span class="text-base">ProgressBar</span> value, click the button on the form. A message box displays the following message:
+<div class="indent"><pre class="sbody-pre">This is the main thread
+							</pre></div>
+Wait for input. Notice that the value in the progress bar continues to change.</li></ol><h3 class="sbody-h3">Troubleshooting</h3>
+
+In more complex applications, make sure that you synchronize multiple threads when you access shared variables. For more information, refer to the <span class="text-base">SyncLock</span> statement and related topics in the Visual Basic Online Help documentation.</div><div id="mt1" class="kb-querywords-section section ng-scope">multi-threaded</div><div kb-properties="" translate="no" applies-to="[&quot;Microsoft Visual Basic 2005&quot;,&quot;Microsoft Visual Basic .NET 2003 Standard Edition&quot;,&quot;Microsoft Visual Basic .NET 2002 Standard Edition&quot;]" keywords="[{&quot;conf&quot;:0,&quot;confSpecified&quot;:true,&quot;level&quot;:0,&quot;Value&quot;:&quot;kbvs2005swept kbvs2005applies kbhowtomaster KB315577 &quot;}]" article-id="315577" last-modified="12/06/2006 23:18:59" revision="4.3" section-header="Properties" details-caption="Article ID: {articleId} - Last Review: {lastModified} - Revision: {revision}" applies-to-caption="Applies to" keywords-caption="Keywords: " class="ng-scope ng-isolate-scope"><div class="section">
+    <div class="section-header">
+        <div class="section-title ng-binding">
+            Properties
+        </div>
+    </div>
+    <p class="ng-binding">Article ID: 315577 - Last Review: 12/06/2006 23:18:59 - Revision: 4.3</p>
+
+    <!-- ngIf: appliesTo --><div ng-if="appliesTo" class="ng-scope">
+        <label for="applies-to" class="ng-binding">Applies to</label>
+        <ul id="applies-to">
+            <!-- ngRepeat: product in appliesTo track by $index --><li ng-repeat="product in appliesTo track by $index" class="ng-binding ng-scope">
+                Microsoft Visual Basic 2005
+            </li><!-- end ngRepeat: product in appliesTo track by $index --><li ng-repeat="product in appliesTo track by $index" class="ng-binding ng-scope">
+                Microsoft Visual Basic .NET 2003 Standard Edition
+            </li><!-- end ngRepeat: product in appliesTo track by $index --><li ng-repeat="product in appliesTo track by $index" class="ng-binding ng-scope">
+                Microsoft Visual Basic .NET 2002 Standard Edition
+            </li><!-- end ngRepeat: product in appliesTo track by $index -->
+        </ul>
+    </div><!-- end ngIf: appliesTo -->
+    <!-- ngIf: keywords --><div ng-if="keywords" class="ng-scope">
+        <label for="keywords" class="ng-binding">Keywords:</label>
+        <ul id="keyword-list">
+            <!-- ngRepeat: keyword in keywords track by $index --><li ng-repeat="keyword in keywords track by $index" class="ng-binding ng-scope">
+                kbvs2005swept kbvs2005applies kbhowtomaster KB315577 
+            </li><!-- end ngRepeat: keyword in keywords track by $index -->
+        </ul>
+    </div><!-- end ngIf: keywords -->
+</div></div><div content-survey="" class="ng-scope ng-isolate-scope"><section class="section content-survey" ng-show="contentSurvey" aria-hidden="false">
+    <header class="section-header">
+        <h5 class="section-title ng-binding">Feedback</h5>
+    </header>
+    <form ng-submit="OnSubmit()" class="ng-pristine ng-valid">
+        <div ng-show="showSurvey" aria-hidden="false" class="">
+            <label ng-class="choiceCaptionClass" class="ng-binding choice-caption">Was this information helpful?</label>
+            <div class="form-group choices">
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input id="survey-yes" type="radio" ng-model="type" value="yes" class="ng-pristine ng-valid" name="00P" aria-checked="false" tabindex="-1" aria-invalid="false">
+                        <span class="ng-binding">Yes</span>
+                    </label>
+                </div>
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input id="survey-no" type="radio" ng-model="type" value="no" class="ng-pristine ng-valid" name="00Q" aria-checked="false" tabindex="-1" aria-invalid="false">
+                        <span class="ng-binding">No</span>
+                    </label>
+                </div>
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input id="survey-somewhat" type="radio" ng-model="type" value="somewhat" class="ng-pristine ng-valid" name="00R" aria-checked="false" tabindex="-1" aria-invalid="false">
+                        <span class="ng-binding">Somewhat</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="suggestion ng-binding">
+                    Tell us what we can do to improve the article
+                </label>
+                <textarea id="survey-verbatim" class="form-control ng-pristine ng-valid ng-valid-maxlength ng-valid-minlength" name="suggestion" ng-model="suggestion" ng-minlength="1" ng-maxlength="400" aria-multiline="true" tabindex="0" aria-invalid="false"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary pull-right ng-binding" type="submit">Submit</button>
+            </div>
+        </div>
+        <div ng-show="!showSurvey" class="ng-binding ng-hide" aria-hidden="true">
+            Thanks! Your feedback will help us improve the support experience. For more help, try searching for what you need at the top of the page. 
+        </div>
+    </form>
+</section></div><div class="ng-scope"><div kb-meta-tag="" data-name="description" data-value="In Visual Basic .NET, you can write multithreaded applications. This article demonstrates how a simple Visual Basic .NET or Visual Basic 2005 application can create and manage threads."></div><div kb-meta-tag="" data-name="Search.Description" data-value="In Visual Basic .NET, you can write multithreaded applications. This article demonstrates how a simple Visual Basic .NET or Visual Basic 2005 application can create and manage threads."></div><div kb-meta-tag="" data-name="Search.KBParents" data-value="10911 7796 1105 5563 2965 5562 2964 "></div><div kb-meta-tag="" data-name="Search.DateModified" data-value="12/6/2006 11:18:59 PM"></div><div kb-meta-tag="" data-name="Search.ContentType" data-value="kb"></div><div kb-meta-tag="" data-name="Search.Products" data-value="375829 36659 36658 "></div><div kb-meta-tag="" data-name="keywords" data-value=" kbvs2005swept kbvs2005applies kbhowtomaster KB315577 "></div><div kb-meta-tag="" data-name="Search.Keywords" data-value=" kbvs2005swept kbvs2005applies kbhowtomaster KB315577 "></div></div></section>
+    </div>
+</div>
+
+</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ngInclude: '/PartialViews/Common/F1Footer.html' --><div ng-include="&#39;/PartialViews/Common/F1Footer.html&#39;" class="ng-scope"><div class="f1-footer ng-scope" ng-controller="F1FooterController">
+    <!-- Needed to span the full page -->
+    <div class="container">
+        <div class="row">
+            <!-- ngRepeat: section in viewlinkfarm.sectionList --><section class="col-sm-24 col-md-8 section remove-header-rule ng-scope" ng-repeat="section in viewlinkfarm.sectionList">
+                <header class="section-header dropdown-no-toggle-header collapsed">
+                    <h3 class="text-base ng-binding">Support</h3>
+                </header>
+                <header class="section-header dropdown-toggle-header collapsed" data-toggle="collapse" data-target="#link-section-footer-0">
+                    <h3 class="text-base ng-binding">Support<a href="" class="text-title pull-right dropdown-toggle win-icon"></a></h3>
+                </header>
+
+                <ul id="link-section-footer-0" class="list-unstyled section-body collapse landing-section-content">
+                    <!-- ngRepeat: link in section.links --><li ng-repeat="link in section.links" class="ng-scope"><a id="link-section-footer-0-link-0" ng-href="http://windows.microsoft.com/en-us/windows-live/microsoft-account-help#microsoft-account=tab0" target="_self" class="ng-binding" href="http://windows.microsoft.com/en-us/windows-live/microsoft-account-help#microsoft-account=tab0">Account support</a></li><!-- end ngRepeat: link in section.links --><li ng-repeat="link in section.links" class="ng-scope"><a id="link-section-footer-0-link-1" ng-href="/en-us/allproducts" target="_self" class="ng-binding" href="https://support.microsoft.com/en-us/allproducts">Supported products list</a></li><!-- end ngRepeat: link in section.links --><li ng-repeat="link in section.links" class="ng-scope"><a id="link-section-footer-0-link-2" ng-href="http://support.microsoft.com/en-us/gp/lifecycle" target="_self" class="ng-binding" href="http://support.microsoft.com/en-us/gp/lifecycle">Product support lifecycle</a></li><!-- end ngRepeat: link in section.links -->
+                </ul>
+            </section><!-- end ngRepeat: section in viewlinkfarm.sectionList --><section class="col-sm-24 col-md-8 section remove-header-rule ng-scope" ng-repeat="section in viewlinkfarm.sectionList">
+                <header class="section-header dropdown-no-toggle-header collapsed">
+                    <h3 class="text-base ng-binding">Security</h3>
+                </header>
+                <header class="section-header dropdown-toggle-header collapsed" data-toggle="collapse" data-target="#link-section-footer-1">
+                    <h3 class="text-base ng-binding">Security<a href="" class="text-title pull-right dropdown-toggle win-icon"></a></h3>
+                </header>
+
+                <ul id="link-section-footer-1" class="list-unstyled section-body collapse landing-section-content">
+                    <!-- ngRepeat: link in section.links --><li ng-repeat="link in section.links" class="ng-scope"><a id="link-section-footer-1-link-0" ng-href="http://support.microsoft.com/en-us/gp/cu_sc_virsec_master" target="_self" class="ng-binding" href="http://support.microsoft.com/en-us/gp/cu_sc_virsec_master">Virus and security</a></li><!-- end ngRepeat: link in section.links --><li ng-repeat="link in section.links" class="ng-scope"><a id="link-section-footer-1-link-1" ng-href="https://www.microsoft.com/security/default.aspx" target="_self" class="ng-binding" href="https://www.microsoft.com/security/default.aspx">Safety &amp; Security Center</a></li><!-- end ngRepeat: link in section.links --><li ng-repeat="link in section.links" class="ng-scope"><a id="link-section-footer-1-link-2" ng-href="http://windows.microsoft.com/en-us/windows/security-essentials-download" target="_self" class="ng-binding" href="http://windows.microsoft.com/en-us/windows/security-essentials-download">Download Security Essentials</a></li><!-- end ngRepeat: link in section.links --><li ng-repeat="link in section.links" class="ng-scope"><a id="link-section-footer-1-link-3" ng-href="https://www.microsoft.com/security/pc-security/malware-removal.aspx" target="_self" class="ng-binding" href="https://www.microsoft.com/security/pc-security/malware-removal.aspx">Malicious Software Removal Tool</a></li><!-- end ngRepeat: link in section.links -->
+                </ul>
+            </section><!-- end ngRepeat: section in viewlinkfarm.sectionList --><section class="col-sm-24 col-md-8 section remove-header-rule ng-scope" ng-repeat="section in viewlinkfarm.sectionList">
+                <header class="section-header dropdown-no-toggle-header collapsed">
+                    <h3 class="text-base ng-binding">Contact Us</h3>
+                </header>
+                <header class="section-header dropdown-toggle-header collapsed" data-toggle="collapse" data-target="#link-section-footer-2">
+                    <h3 class="text-base ng-binding">Contact Us<a href="" class="text-title pull-right dropdown-toggle win-icon"></a></h3>
+                </header>
+
+                <ul id="link-section-footer-2" class="list-unstyled section-body collapse landing-section-content">
+                    <!-- ngRepeat: link in section.links --><li ng-repeat="link in section.links" class="ng-scope"><a id="link-section-footer-2-link-0" ng-href="https://support.microsoft.com/reportascam?locale=en-us" target="_self" class="ng-binding" href="https://support.microsoft.com/reportascam?locale=en-us">Report a support scam</a></li><!-- end ngRepeat: link in section.links --><li ng-repeat="link in section.links" class="ng-scope"><a id="link-section-footer-2-link-1" ng-href="http://support.microsoft.com/en-us/answerdesk/accessibility" target="_self" class="ng-binding" href="http://support.microsoft.com/en-us/answerdesk/accessibility">Disability Answer Desk</a></li><!-- end ngRepeat: link in section.links --><li ng-repeat="link in section.links" class="ng-scope"><a id="link-section-footer-2-link-2" ng-href="https://www.microsoft.com/worldwide" target="_self" class="ng-binding" href="https://www.microsoft.com/worldwide">Locate Microsoft addresses worldwide</a></li><!-- end ngRepeat: link in section.links -->
+                </ul>
+            </section><!-- end ngRepeat: section in viewlinkfarm.sectionList -->
+        </div>
+    </div>
+</div></div>
+
+    <!-- ngInclude: '/PartialViews/Common/Locale.html' --><div ng-include="&#39;/PartialViews/Common/Locale.html&#39;" class="ng-scope"><div class="language-selector-section ng-scope ng-hide" id="language-selector" ng-controller="LanguageController" ng-show="displayLanguageSelector" aria-hidden="true">
+    <div class="container">
+        <div class="clearfix text-title spacer-20-top spacer-32-bottom language-selector-section ng-binding">
+            This site in other countries/regions
+            <a class="win-icon win-icon-Cancel pull-right" ng-click="closeClick()" tabindex="0"></a>
+        </div>
+        <div class="row spacer-12-bottom hidden-sm hidden-md hidden-lg hidden-xl">
+            <!-- ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-fr-dz">Algérie - Français</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-ar">Argentina - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-en-au">Australia - English</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-fr-be">Belgique - Français</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-nl-be">België - Nederlands</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-bo">Bolivia - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-hr-ba">Bosna i Hercegovina  - Hrvatski</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-pt-br">Brasil - Português</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-en-ca">Canada - English</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-fr-ca">Canada - Français</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-cl">Chile - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-co">Colombia - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-cr">Costa Rica - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-sr-Latn-me">Crna Gora - Srpski</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-da-dk">Danmark - Dansk</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-de-de">Deutschland – Deutsch</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-do">Dominican Republic - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-ec">Ecuador - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-et-ee">Eesti - Eesti</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-sv">El Salvador - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-es">España - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-us">Estados Unidos - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-fr-fr">France - Français</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-gt">Guatemala - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-en-hk">Hong Kong SAR - English</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-hr-hr">Hrvatska - Hrvatski</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-en-in">India - English</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-id-id">Indonesia (Bahasa) - Bahasa</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-en-ie">Ireland - English</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-it-it">Italia - Italiano</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-lv-lv">Latvija - Latviešu</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-lt-lt">Lietuva - Lietuvių</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-fr-lu">Luxembourg - Français</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-hu-hu">Magyarország - Magyar</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-en-my">Malaysia - English</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-fr-ma">Maroc - Français</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-mx">México - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-nl-nl">Nederland - Nederlands</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-en-nz">New Zealand - English</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-nb-no">Norge - Bokmål</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-pa">Panamá - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-py">Paraguay - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-pe">Perú - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-en-ph">Philippines - English</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-pl-pl">Polska - Polski</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-pt-pt">Portugal - Português</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-pr">Puerto Rico - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-ro-ro">România - Română</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-de-ch">Schweiz - Deutsch</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-en-sg">Singapore - English</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-sl-si">Slovenija - Slovenščina</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-sk-sk">Slovensko - Slovenčina</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-en-za">South Africa - English</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-sr-latn-rs">Srbija - Srpski</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-fr-ch">Suisse - Français</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-fi-fi">Suomi - Suomi</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-sv-se">Sverige - Svenska</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-fr-tn">Tunisie - Français</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-tr-tr">Türkiye - Türkçe</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-en-gb">United Kingdom - English</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-en-us">United States (English)</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-uy">Uruguay - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-es-ve">Venezuela - Español</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-vi-vn">Việt Nam - Tiếng việt</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-is-is">Ísland - Íslenska</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-de-at">Österreich - Deutsch</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-cs-cz">Česká Republika - Čeština</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-el-gr">Ελλάδα - Ελληνικά</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-bg-bg">България - Български</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-ru-kz">Казахстан - Русский</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-ru-ru">Россия - Русский</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-uk-ua">Україна - Українська</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-he-il">ישראל - עברית</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-ar-ae">الإمارات العربية المتحدة - العربية</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-ar-sa">المملكة العربية السعودية - العربية</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-ar-eg">مصر - العربية</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-hi-in">भारत - हिंदी</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-th-th">ไทย - ไทย</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-zh-cn">中国  - 简体中文</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-zh-tw">台灣 - 繁體中文</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-ja-jp">日本 - 日本語</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-zh-hk">香港特別行政區 - 繁體中文</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' --><div ng-repeat="language in languages | objectOrderBy:&#39;displayName&#39;" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;mobile-language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="mobile-language-ko-kr">대한민국 - 한국어</a>
+            </div><!-- end ngRepeat: language in languages | objectOrderBy:'displayName' -->
+        </div>
+        <div class="row spacer-12-bottom hidden-xs">
+            <!-- ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-fr-dz">Algérie - Français</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-us">Estados Unidos - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-pe">Perú - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-vi-vn">Việt Nam - Tiếng việt</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-ar">Argentina - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-fr-fr">France - Français</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-en-ph">Philippines - English</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-is-is">Ísland - Íslenska</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-en-au">Australia - English</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-gt">Guatemala - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-pl-pl">Polska - Polski</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-de-at">Österreich - Deutsch</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-fr-be">Belgique - Français</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-en-hk">Hong Kong SAR - English</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-pt-pt">Portugal - Português</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-cs-cz">Česká Republika - Čeština</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-nl-be">België - Nederlands</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-hr-hr">Hrvatska - Hrvatski</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-pr">Puerto Rico - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-el-gr">Ελλάδα - Ελληνικά</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-bo">Bolivia - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-en-in">India - English</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-ro-ro">România - Română</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-bg-bg">България - Български</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-hr-ba">Bosna i Hercegovina  - Hrvatski</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-id-id">Indonesia (Bahasa) - Bahasa</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-de-ch">Schweiz - Deutsch</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-ru-kz">Казахстан - Русский</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-pt-br">Brasil - Português</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-en-ie">Ireland - English</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-en-sg">Singapore - English</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-ru-ru">Россия - Русский</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-en-ca">Canada - English</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-it-it">Italia - Italiano</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-sl-si">Slovenija - Slovenščina</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-uk-ua">Україна - Українська</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-fr-ca">Canada - Français</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-lv-lv">Latvija - Latviešu</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-sk-sk">Slovensko - Slovenčina</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-he-il">ישראל - עברית</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-cl">Chile - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-lt-lt">Lietuva - Lietuvių</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-en-za">South Africa - English</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-ar-ae">الإمارات العربية المتحدة - العربية</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-co">Colombia - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-fr-lu">Luxembourg - Français</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-sr-latn-rs">Srbija - Srpski</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-ar-sa">المملكة العربية السعودية - العربية</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-cr">Costa Rica - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-hu-hu">Magyarország - Magyar</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-fr-ch">Suisse - Français</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-ar-eg">مصر - العربية</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-sr-Latn-me">Crna Gora - Srpski</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-en-my">Malaysia - English</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-fi-fi">Suomi - Suomi</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-hi-in">भारत - हिंदी</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-da-dk">Danmark - Dansk</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-fr-ma">Maroc - Français</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-sv-se">Sverige - Svenska</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-th-th">ไทย - ไทย</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-de-de">Deutschland – Deutsch</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-mx">México - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-fr-tn">Tunisie - Français</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-zh-cn">中国  - 简体中文</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-do">Dominican Republic - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-nl-nl">Nederland - Nederlands</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-tr-tr">Türkiye - Türkçe</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-zh-tw">台灣 - 繁體中文</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-ec">Ecuador - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-en-nz">New Zealand - English</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-en-gb">United Kingdom - English</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-ja-jp">日本 - 日本語</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-et-ee">Eesti - Eesti</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-nb-no">Norge - Bokmål</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-en-us">United States (English)</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-zh-hk">香港特別行政區 - 繁體中文</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-sv">El Salvador - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-pa">Panamá - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-uy">Uruguay - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-ko-kr">대한민국 - 한국어</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-es">España - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-py">Paraguay - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-es-ve">Venezuela - Español</a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index --><div ng-repeat="language in languagesListForLargeScreens track by $index" class="col-sm-6 col-xs-24 ng-scope">
+                <a ng-attr-id="{{&#39;language-&#39;+language.locale}}" href="" ng-click="setLanguage(language);" class="ng-binding" tabindex="0" id="language-"></a>
+            </div><!-- end ngRepeat: language in languagesListForLargeScreens track by $index -->
+        </div>
+    </div>
+</div></div>
+
+ 
+
+<div class="shell-rwd shell-footer" lang="en" data-bi-area="Footer" data-bi-view="3xLinks">
+    <div class="shell-footer-wrapper">
+        <div class="shell-footer-lang">
+                <ul>
+                    <li>
+                        <i class="shell-icon-globe"></i>
+                    </li>
+                    <li>
+                        <a id="locale-picker-link" href="javascript:function smcLanguageSelector() { return undefined; } smcLanguageSelector();" data-bi-name="LocalePicker">
+                              English (United States)‎
+                        </a>
+                    </li>
+                </ul>
+        </div>
+        <div class="shell-footer-copyright">
+            <ul>
+                            <li>
+                                <a id="shellmenu_0" href="http://go.microsoft.com/fwlink/?LinkID=206977" class="ctl_footerNavLink" data-bi-name="Footer_TermsOfUse" data-bi-slot="1">
+                                    Terms of use
+                                </a>
+                            </li>
+                            <li>
+                                <a id="shellmenu_1" href="http://go.microsoft.com/fwlink/?LinkID=521839" class="ctl_footerNavLink" data-bi-name="Footer_Privacy&amp;cookies" data-bi-slot="2">
+                                    Privacy &amp; cookies
+                                </a>
+                            </li>
+                            <li>
+                                <a id="shellmenu_2" href="http://go.microsoft.com/?linkid=9851308" class="ctl_footerNavLink" data-bi-name="Footer_Trademarks" data-bi-slot="3">
+                                    Trademarks
+                                </a>
+                            </li>
+
+                <li class="ctl_footerCopyright">
+                    © 2015 Microsoft
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <div languaugeselector=""></div>
+    
+    
+    <noscript>&lt;img alt="" width="1" height="1" src="http://c.microsoft.com/trans_pixel.aspx"&gt;</noscript>
+
+    
+    <div metatags=""></div>
+    
+    <script type="text/JavaScript" async="">
+        var varAutoFirePV = 1;
+        var varClickTracking = 1;
+        var varCustomerTracking = 1;
+        var Route = "76500";
+        var Ctrl = "";
+        document.write("<script type='text/javascript' src='" + (window.location.protocol) + "//c.microsoft.com/ms.js'" + "'><\/script>");
+    </script><script type="text/javascript" src="./Threading_files/ms.js" '=""></script><iframe id="_msnFrame" src="./Threading_files/c.gif" style="z-index:-1;height:1px;width:1px;display:none;visibility:hidden;"></iframe>
+
+
+
+
+<script src="./Threading_files/broker-config.js"></script><div id="meControlDropdown" class="msame_Drop_root" style="display: none;"><div class="msame_Drop_topb"></div><div class="msame_Drop_content"><div class="msame_Drop_active"><div class="msame_Drop_active_pic"><div class="msame_Drop_active_piccont"><div class="msame_Drop_active_picframe"><a href="https://support.microsoft.com/#" title="Update your photo"><img role="presentation" src="./Threading_files/bluemanmxxl.png"></a></div></div></div><div class="msame_Drop_active_right"><div class="msame_TxtTrunc msame_Drop_active_name">Septian</div><div class="msame_TxtTrunc msame_Drop_active_name">Primadewa</div><div class="msame_TxtTrunc msame_Drop_active_email">iansaviour@gmail.com</div></div></div><div class="msame_Drop_account"><div id="msame_si0" class="msame_Drop_SI"><a href="https://account.microsoft.com/?ref=MeControl&lang=en-US" class="msame_TxtTrunc">View account</a></div></div><div class="msame_Drop_links" style="display: none;"><div class="msame_Drop_links_list"></div></div><div class="msame_Drop_signIn"></div><div class="msame_Drop_signOut"><div id="msame_si1" class="msame_Drop_SI"><a href="https://support.microsoft.com/#" class="msame_TxtTrunc">Sign out</a></div></div><div class="msame_Drop_accts" style="display: none;"><div class="msame_Drop_sep"></div><div class="msame_Drop_accts_list"></div></div></div></div></body></html>
