@@ -60,7 +60,11 @@ Public Class FormLogin
             Catch ex As Exception
                 XtraMessageBox.Show("Password atau username salah!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
-            
+
         End If
+    End Sub
+
+    Private Sub FormLogin_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        process_loop() 'scheduleloop
     End Sub
 End Class

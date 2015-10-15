@@ -27,4 +27,5 @@ id_sms,output_sms
 
 WORK :
 
-delete and new kontak
+V delete and new kontak
+scheduler master
