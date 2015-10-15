@@ -1,0 +1,30 @@
+SELECT nama_app_ym,nama_app_sms,char_pemisah,balas_spam,sms_x_hari_kosongkan FROM tb_option LIMIT 1
+
+INSERT INTO inbox(`Text`,SenderNumber,TextDecoded,UDH,RecipientID) VALUES('say#aku adalah kapiten','08979200981','say#aku adalah kapiten','1','1')
+
+INSERT INTO inbox(`Text`,SenderNumber,TextDecoded,UDH,RecipientID) VALUES('BC#a#say#aku adalah kapiten','08979200981','BC#xxx#say#aku adalah kapiten','1','1')
+
+
+-- check if broadcast
+SET @broadcast_kw = (SELECT keyword_broadcast FROM tb_option LIMIT 1);
+SET @broadcast_kw_length = CHAR_LENGTH(@broadcast_kw);
+SET @broadcast_grup = "";
+SET @is_broadcast = "2";
+SELECT @broadcast_kw;
+SELECT   IF(LEFT('BCOP#a#say#aku adalah kapiten',@broadcast_kw_length)=@broadcast_kw,"yes","no") ;
+
+IF THEN -- broadcast
+	SET @is_broadcast = "1";
+END IF;
+--
+SELECT @is_broadcast;
+
+id_sms,output_sms
+
+
+- change
+- tb_grup_kontak_member
+
+WORK :
+
+delete and new kontak

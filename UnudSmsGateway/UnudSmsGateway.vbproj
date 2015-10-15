@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37A21894-D563-4F51-856C-329F0A614DB2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>UnudSmsGateway.My.MyApplication</StartupObject>
+    <RootNamespace>UnudSmsGateway</RootNamespace>
+    <AssemblyName>Aplikasi SMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ManifestCertificateThumbprint>3108B5C6115AEFE1712B8D2325F767C723DD9C4C</ManifestCertificateThumbprint>
+    <ManifestKeyFile>UnudSmsGateway_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Installer2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationIcon>email.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Aplikasi SMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Aplikasi SMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.OfficeSkins.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Extensibility, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="MySql.Data, Version=6.4.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAbout.Designer.vb">
+      <DependentUpon>FormAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBroadcast.Designer.vb">
+      <DependentUpon>FormBroadcast.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBroadcast.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormContactPrivelege.Designer.vb">
+      <DependentUpon>FormContactPrivelege.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormContactPrivelege.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditContact.Designer.vb">
+      <DependentUpon>FormEditContact.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditContact.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditUser.Designer.vb">
+      <DependentUpon>FormEditUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportOperasi.Designer.vb">
+      <DependentUpon>FormExportOperasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportOperasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGammu.Designer.vb">
+      <DependentUpon>FormGammu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGammu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGammuNomor.Designer.vb">
+      <DependentUpon>FormGammuNomor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGammuNomor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGammuNomorAdd.Designer.vb">
+      <DependentUpon>FormGammuNomorAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGammuNomorAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGrupKontak.Designer.vb">
+      <DependentUpon>FormGrupKontak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGrupKontak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportExportExcel.Designer.vb">
+      <DependentUpon>FormImportExportExcel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportExportExcel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportOperasi.Designer.vb">
+      <DependentUpon>FormImportOperasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportOperasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageOperasiPartner.Designer.vb">
+      <DependentUpon>FormManageOperasiPartner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageOperasiPartner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMemberKontak.Designer.vb">
+      <DependentUpon>FormMemberKontak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMemberKontak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMonitorRecieved.Designer.vb">
+      <DependentUpon>FormMonitorRecieved.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMonitorRecieved.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMonitorSent.Designer.vb">
+      <DependentUpon>FormMonitorSent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMonitorSent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNamaAplikasi.Designer.vb">
+      <DependentUpon>FormNamaAplikasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNamaAplikasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewContact.Designer.vb">
+      <DependentUpon>FormNewContact.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewContact.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewGrupKontak.Designer.vb">
+      <DependentUpon>FormNewGrupKontak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewGrupKontak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewHost.Designer.vb">
+      <DependentUpon>FormNewHost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewHost.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewUser.Designer.vb">
+      <DependentUpon>FormNewUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOperasi.Designer.vb">
+      <DependentUpon>FormOperasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPanelOperasi.Designer.vb">
+      <DependentUpon>FormPanelOperasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPanelOperasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPartnerHost.Designer.vb">
+      <DependentUpon>FormPartnerHost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPartnerHost.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPemisah.Designer.vb">
+      <DependentUpon>FormPemisah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPemisah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectContact.Designer.vb">
+      <DependentUpon>FormSelectContact.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectContact.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServer.Designer.vb">
+      <DependentUpon>FormServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServiceSetup.Designer.vb">
+      <DependentUpon>FormServiceSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormServiceSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingHost.Designer.vb">
+      <DependentUpon>FormSettingHost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingHost.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingHostPartner.Designer.vb">
+      <DependentUpon>FormSettingHostPartner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingHostPartner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSingleOperasi.Designer.vb">
+      <DependentUpon>FormSingleOperasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSingleOperasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSMSDetail.Designer.vb">
+      <DependentUpon>FormSMSDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSMSDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUser.Designer.vb">
+      <DependentUpon>FormUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddModem.Designer.vb">
+      <DependentUpon>FormAddModem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddModem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingGammu.Designer.vb">
+      <DependentUpon>FormSettingGammu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingGammu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lib\FormScheduler.Designer.vb">
+      <DependentUpon>FormScheduler.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\FormScheduler.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lib\FormSchedulerAdd.Designer.vb">
+      <DependentUpon>FormSchedulerAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\FormSchedulerAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lib\Koneksi.vb" />
+    <Compile Include="Lib\MainModule.vb" />
+    <Compile Include="FormSMS.Designer.vb">
+      <DependentUpon>FormSMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RibbonForm.Designer.vb">
+      <DependentUpon>RibbonForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKeyword.Designer.vb">
+      <DependentUpon>FormKeyword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormKeyword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBroadcast.resx">
+      <DependentUpon>FormBroadcast.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormContactPrivelege.resx">
+      <DependentUpon>FormContactPrivelege.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditContact.resx">
+      <DependentUpon>FormEditContact.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditUser.resx">
+      <DependentUpon>FormEditUser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportOperasi.resx">
+      <DependentUpon>FormExportOperasi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGammu.resx">
+      <DependentUpon>FormGammu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGammuNomor.resx">
+      <DependentUpon>FormGammuNomor.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGammuNomorAdd.resx">
+      <DependentUpon>FormGammuNomorAdd.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGrupKontak.resx">
+      <DependentUpon>FormGrupKontak.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportExportExcel.resx">
+      <DependentUpon>FormImportExportExcel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportOperasi.resx">
+      <DependentUpon>FormImportOperasi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageOperasiPartner.resx">
+      <DependentUpon>FormManageOperasiPartner.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMemberKontak.resx">
+      <DependentUpon>FormMemberKontak.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMonitorRecieved.resx">
+      <DependentUpon>FormMonitorRecieved.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMonitorSent.resx">
+      <DependentUpon>FormMonitorSent.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNamaAplikasi.resx">
+      <DependentUpon>FormNamaAplikasi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewContact.resx">
+      <DependentUpon>FormNewContact.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewGrupKontak.resx">
+      <DependentUpon>FormNewGrupKontak.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewHost.resx">
+      <DependentUpon>FormNewHost.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewUser.resx">
+      <DependentUpon>FormNewUser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperasi.resx">
+      <DependentUpon>FormOperasi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPanelOperasi.resx">
+      <DependentUpon>FormPanelOperasi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPartnerHost.resx">
+      <DependentUpon>FormPartnerHost.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPemisah.resx">
+      <DependentUpon>FormPemisah.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectContact.resx">
+      <DependentUpon>FormSelectContact.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServer.resx">
+      <DependentUpon>FormServer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServiceSetup.resx">
+      <DependentUpon>FormServiceSetup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingHost.resx">
+      <DependentUpon>FormSettingHost.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingHostPartner.resx">
+      <DependentUpon>FormSettingHostPartner.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSingleOperasi.resx">
+      <DependentUpon>FormSingleOperasi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSMS.resx">
+      <DependentUpon>FormSMS.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSMSDetail.resx">
+      <DependentUpon>FormSMSDetail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUser.resx">
+      <DependentUpon>FormUser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddModem.resx">
+      <DependentUpon>FormAddModem.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingGammu.resx">
+      <DependentUpon>FormSettingGammu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lib\FormScheduler.resx">
+      <DependentUpon>FormScheduler.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lib\FormSchedulerAdd.resx">
+      <DependentUpon>FormSchedulerAdd.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonForm.resx">
+      <DependentUpon>RibbonForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKeyword.resx">
+      <DependentUpon>FormKeyword.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="UnudSmsGateway_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-message32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="email.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
