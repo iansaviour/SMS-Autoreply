@@ -24,42 +24,42 @@ Partial Class FormSchedulerTimer
         Me.BSave = New DevExpress.XtraEditors.SimpleButton
         Me.LEMonth = New DevExpress.XtraEditors.SearchLookUpEdit
         Me.GridView5 = New DevExpress.XtraGrid.Views.Grid.GridView
+        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn
+        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn
         Me.LEDom = New DevExpress.XtraEditors.SearchLookUpEdit
         Me.GridView4 = New DevExpress.XtraGrid.Views.Grid.GridView
+        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn
         Me.LEDow = New DevExpress.XtraEditors.SearchLookUpEdit
         Me.GridView3 = New DevExpress.XtraGrid.Views.Grid.GridView
+        Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn
+        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn
         Me.LEHr = New DevExpress.XtraEditors.SearchLookUpEdit
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn
+        Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn
         Me.LEMin = New DevExpress.XtraEditors.SearchLookUpEdit
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView
+        Me.GridColumn40 = New DevExpress.XtraGrid.Columns.GridColumn
+        Me.GridColumn41 = New DevExpress.XtraGrid.Columns.GridColumn
         Me.LabelControl7 = New DevExpress.XtraEditors.LabelControl
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl
         Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl
         Me.LabelControl4 = New DevExpress.XtraEditors.LabelControl
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl
-        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn40 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn41 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.DateEdit1 = New DevExpress.XtraEditors.DateEdit
+        Me.DEStart = New DevExpress.XtraEditors.DateEdit
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl
-        Me.SpinEdit1 = New DevExpress.XtraEditors.SpinEdit
-        Me.SearchLookUpEdit4 = New DevExpress.XtraEditors.SearchLookUpEdit
+        Me.SEIntDay = New DevExpress.XtraEditors.SpinEdit
+        Me.SEIntSec = New DevExpress.XtraEditors.SearchLookUpEdit
         Me.GridView9 = New DevExpress.XtraGrid.Views.Grid.GridView
         Me.GridColumn15 = New DevExpress.XtraGrid.Columns.GridColumn
         Me.GridColumn16 = New DevExpress.XtraGrid.Columns.GridColumn
         Me.LabelControl11 = New DevExpress.XtraEditors.LabelControl
-        Me.SearchLookUpEdit3 = New DevExpress.XtraEditors.SearchLookUpEdit
+        Me.SEIntMenit = New DevExpress.XtraEditors.SearchLookUpEdit
         Me.GridView8 = New DevExpress.XtraGrid.Views.Grid.GridView
         Me.GridColumn13 = New DevExpress.XtraGrid.Columns.GridColumn
         Me.GridColumn14 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.SearchLookUpEdit2 = New DevExpress.XtraEditors.SearchLookUpEdit
+        Me.SEIntJam = New DevExpress.XtraEditors.SearchLookUpEdit
         Me.GridView7 = New DevExpress.XtraGrid.Views.Grid.GridView
         Me.GridColumn11 = New DevExpress.XtraGrid.Columns.GridColumn
         Me.GridColumn12 = New DevExpress.XtraGrid.Columns.GridColumn
@@ -69,7 +69,7 @@ Partial Class FormSchedulerTimer
         Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl
         Me.GroupControl3 = New DevExpress.XtraEditors.GroupControl
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl
-        Me.SearchLookUpEdit1 = New DevExpress.XtraEditors.SearchLookUpEdit
+        Me.LEWeek = New DevExpress.XtraEditors.SearchLookUpEdit
         Me.GridView6 = New DevExpress.XtraGrid.Views.Grid.GridView
         Me.GridColumn9 = New DevExpress.XtraGrid.Columns.GridColumn
         Me.GridColumn10 = New DevExpress.XtraGrid.Columns.GridColumn
@@ -85,22 +85,22 @@ Partial Class FormSchedulerTimer
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LEMin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DateEdit1.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DateEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DEStart.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DEStart.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
-        CType(Me.SpinEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SearchLookUpEdit4.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SEIntDay.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SEIntSec.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SearchLookUpEdit3.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SEIntMenit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SearchLookUpEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SEIntJam.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl2.SuspendLayout()
         CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl3.SuspendLayout()
-        CType(Me.SearchLookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LEWeek.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -155,6 +155,20 @@ Partial Class FormSchedulerTimer
         Me.GridView5.OptionsSelection.EnableAppearanceFocusedCell = False
         Me.GridView5.OptionsView.ShowGroupPanel = False
         '
+        'GridColumn7
+        '
+        Me.GridColumn7.Caption = "Bulan"
+        Me.GridColumn7.FieldName = "value_month"
+        Me.GridColumn7.Name = "GridColumn7"
+        '
+        'GridColumn8
+        '
+        Me.GridColumn8.Caption = "Bulan"
+        Me.GridColumn8.FieldName = "display_month"
+        Me.GridColumn8.Name = "GridColumn8"
+        Me.GridColumn8.Visible = True
+        Me.GridColumn8.VisibleIndex = 0
+        '
         'LEDom
         '
         Me.LEDom.Location = New System.Drawing.Point(78, 40)
@@ -177,6 +191,20 @@ Partial Class FormSchedulerTimer
         Me.GridView4.Name = "GridView4"
         Me.GridView4.OptionsSelection.EnableAppearanceFocusedCell = False
         Me.GridView4.OptionsView.ShowGroupPanel = False
+        '
+        'GridColumn5
+        '
+        Me.GridColumn5.Caption = "Date"
+        Me.GridColumn5.FieldName = "value_date"
+        Me.GridColumn5.Name = "GridColumn5"
+        '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "Date"
+        Me.GridColumn6.FieldName = "display_date"
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.Visible = True
+        Me.GridColumn6.VisibleIndex = 0
         '
         'LEDow
         '
@@ -201,6 +229,20 @@ Partial Class FormSchedulerTimer
         Me.GridView3.OptionsSelection.EnableAppearanceFocusedCell = False
         Me.GridView3.OptionsView.ShowGroupPanel = False
         '
+        'GridColumn3
+        '
+        Me.GridColumn3.Caption = "Hari"
+        Me.GridColumn3.FieldName = "value_dow"
+        Me.GridColumn3.Name = "GridColumn3"
+        '
+        'GridColumn4
+        '
+        Me.GridColumn4.Caption = "Hari"
+        Me.GridColumn4.FieldName = "display_dow"
+        Me.GridColumn4.Name = "GridColumn4"
+        Me.GridColumn4.Visible = True
+        Me.GridColumn4.VisibleIndex = 0
+        '
         'LEHr
         '
         Me.LEHr.Location = New System.Drawing.Point(325, 42)
@@ -224,6 +266,20 @@ Partial Class FormSchedulerTimer
         Me.GridView1.OptionsSelection.EnableAppearanceFocusedCell = False
         Me.GridView1.OptionsView.ShowGroupPanel = False
         '
+        'GridColumn1
+        '
+        Me.GridColumn1.Caption = "Jam"
+        Me.GridColumn1.FieldName = "value_hour"
+        Me.GridColumn1.Name = "GridColumn1"
+        '
+        'GridColumn2
+        '
+        Me.GridColumn2.Caption = "Jam"
+        Me.GridColumn2.FieldName = "display_hour"
+        Me.GridColumn2.Name = "GridColumn2"
+        Me.GridColumn2.Visible = True
+        Me.GridColumn2.VisibleIndex = 0
+        '
         'LEMin
         '
         Me.LEMin.Location = New System.Drawing.Point(325, 77)
@@ -246,6 +302,20 @@ Partial Class FormSchedulerTimer
         Me.GridView2.Name = "GridView2"
         Me.GridView2.OptionsSelection.EnableAppearanceFocusedCell = False
         Me.GridView2.OptionsView.ShowGroupPanel = False
+        '
+        'GridColumn40
+        '
+        Me.GridColumn40.Caption = "Menit"
+        Me.GridColumn40.FieldName = "value_min"
+        Me.GridColumn40.Name = "GridColumn40"
+        '
+        'GridColumn41
+        '
+        Me.GridColumn41.Caption = "Menit"
+        Me.GridColumn41.FieldName = "display_min"
+        Me.GridColumn41.Name = "GridColumn41"
+        Me.GridColumn41.Visible = True
+        Me.GridColumn41.VisibleIndex = 0
         '
         'LabelControl7
         '
@@ -292,94 +362,27 @@ Partial Class FormSchedulerTimer
         Me.LabelControl3.TabIndex = 174
         Me.LabelControl3.Text = "Menit"
         '
-        'GridColumn7
+        'DEStart
         '
-        Me.GridColumn7.Caption = "Bulan"
-        Me.GridColumn7.FieldName = "value_month"
-        Me.GridColumn7.Name = "GridColumn7"
-        '
-        'GridColumn8
-        '
-        Me.GridColumn8.Caption = "Bulan"
-        Me.GridColumn8.FieldName = "display_month"
-        Me.GridColumn8.Name = "GridColumn8"
-        Me.GridColumn8.Visible = True
-        Me.GridColumn8.VisibleIndex = 0
-        '
-        'GridColumn5
-        '
-        Me.GridColumn5.Caption = "Date"
-        Me.GridColumn5.FieldName = "value_date"
-        Me.GridColumn5.Name = "GridColumn5"
-        '
-        'GridColumn6
-        '
-        Me.GridColumn6.Caption = "Date"
-        Me.GridColumn6.FieldName = "display_date"
-        Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.Visible = True
-        Me.GridColumn6.VisibleIndex = 0
-        '
-        'GridColumn3
-        '
-        Me.GridColumn3.Caption = "Hari"
-        Me.GridColumn3.FieldName = "value_dow"
-        Me.GridColumn3.Name = "GridColumn3"
-        '
-        'GridColumn4
-        '
-        Me.GridColumn4.Caption = "Hari"
-        Me.GridColumn4.FieldName = "display_dow"
-        Me.GridColumn4.Name = "GridColumn4"
-        Me.GridColumn4.Visible = True
-        Me.GridColumn4.VisibleIndex = 0
-        '
-        'GridColumn1
-        '
-        Me.GridColumn1.Caption = "Jam"
-        Me.GridColumn1.FieldName = "value_hour"
-        Me.GridColumn1.Name = "GridColumn1"
-        '
-        'GridColumn2
-        '
-        Me.GridColumn2.Caption = "Jam"
-        Me.GridColumn2.FieldName = "display_hour"
-        Me.GridColumn2.Name = "GridColumn2"
-        Me.GridColumn2.Visible = True
-        Me.GridColumn2.VisibleIndex = 0
-        '
-        'GridColumn40
-        '
-        Me.GridColumn40.Caption = "Menit"
-        Me.GridColumn40.FieldName = "value_min"
-        Me.GridColumn40.Name = "GridColumn40"
-        '
-        'GridColumn41
-        '
-        Me.GridColumn41.Caption = "Menit"
-        Me.GridColumn41.FieldName = "display_min"
-        Me.GridColumn41.Name = "GridColumn41"
-        Me.GridColumn41.Visible = True
-        Me.GridColumn41.VisibleIndex = 0
-        '
-        'DateEdit1
-        '
-        Me.DateEdit1.EditValue = Nothing
-        Me.DateEdit1.Location = New System.Drawing.Point(12, 30)
-        Me.DateEdit1.Name = "DateEdit1"
-        Me.DateEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateEdit1.Properties.VistaEditTime = DevExpress.Utils.DefaultBoolean.[True]
-        Me.DateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-        Me.DateEdit1.Size = New System.Drawing.Size(369, 20)
-        Me.DateEdit1.TabIndex = 175
+        Me.DEStart.EditValue = Nothing
+        Me.DEStart.Location = New System.Drawing.Point(12, 30)
+        Me.DEStart.Name = "DEStart"
+        Me.DEStart.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DEStart.Properties.DisplayFormat.FormatString = "dd MMM yyyy hh:mm:ss"
+        Me.DEStart.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.DEStart.Properties.Mask.EditMask = "dd MMM yyyy hh:mm:ss"
+        Me.DEStart.Properties.VistaEditTime = DevExpress.Utils.DefaultBoolean.[True]
+        Me.DEStart.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+        Me.DEStart.Size = New System.Drawing.Size(369, 20)
+        Me.DEStart.TabIndex = 175
         '
         'GroupControl1
         '
-        Me.GroupControl1.Controls.Add(Me.SpinEdit1)
-        Me.GroupControl1.Controls.Add(Me.SearchLookUpEdit4)
+        Me.GroupControl1.Controls.Add(Me.SEIntDay)
+        Me.GroupControl1.Controls.Add(Me.SEIntSec)
         Me.GroupControl1.Controls.Add(Me.LabelControl11)
-        Me.GroupControl1.Controls.Add(Me.SearchLookUpEdit3)
-        Me.GroupControl1.Controls.Add(Me.SearchLookUpEdit2)
+        Me.GroupControl1.Controls.Add(Me.SEIntMenit)
+        Me.GroupControl1.Controls.Add(Me.SEIntJam)
         Me.GroupControl1.Controls.Add(Me.LabelControl8)
         Me.GroupControl1.Controls.Add(Me.LabelControl10)
         Me.GroupControl1.Controls.Add(Me.LabelControl9)
@@ -390,29 +393,31 @@ Partial Class FormSchedulerTimer
         Me.GroupControl1.TabIndex = 184
         Me.GroupControl1.Text = "Interval"
         '
-        'SpinEdit1
+        'SEIntDay
         '
-        Me.SpinEdit1.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.SpinEdit1.Location = New System.Drawing.Point(12, 42)
-        Me.SpinEdit1.Name = "SpinEdit1"
-        Me.SpinEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-        Me.SpinEdit1.Size = New System.Drawing.Size(221, 20)
-        Me.SpinEdit1.TabIndex = 198
+        Me.SEIntDay.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.SEIntDay.Location = New System.Drawing.Point(12, 42)
+        Me.SEIntDay.Name = "SEIntDay"
+        Me.SEIntDay.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+        Me.SEIntDay.Size = New System.Drawing.Size(221, 20)
+        Me.SEIntDay.TabIndex = 198
         '
-        'SearchLookUpEdit4
+        'SEIntSec
         '
-        Me.SearchLookUpEdit4.Location = New System.Drawing.Point(12, 153)
-        Me.SearchLookUpEdit4.Name = "SearchLookUpEdit4"
-        Me.SearchLookUpEdit4.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.SearchLookUpEdit4.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Black
-        Me.SearchLookUpEdit4.Properties.AppearanceReadOnly.Options.UseBackColor = True
-        Me.SearchLookUpEdit4.Properties.AppearanceReadOnly.Options.UseForeColor = True
-        Me.SearchLookUpEdit4.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.SearchLookUpEdit4.Properties.NullText = ""
-        Me.SearchLookUpEdit4.Properties.ShowFooter = False
-        Me.SearchLookUpEdit4.Properties.View = Me.GridView9
-        Me.SearchLookUpEdit4.Size = New System.Drawing.Size(221, 20)
-        Me.SearchLookUpEdit4.TabIndex = 197
+        Me.SEIntSec.Location = New System.Drawing.Point(12, 153)
+        Me.SEIntSec.Name = "SEIntSec"
+        Me.SEIntSec.Properties.Appearance.Options.UseTextOptions = True
+        Me.SEIntSec.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+        Me.SEIntSec.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.SEIntSec.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Black
+        Me.SEIntSec.Properties.AppearanceReadOnly.Options.UseBackColor = True
+        Me.SEIntSec.Properties.AppearanceReadOnly.Options.UseForeColor = True
+        Me.SEIntSec.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.SEIntSec.Properties.NullText = ""
+        Me.SEIntSec.Properties.ShowFooter = False
+        Me.SEIntSec.Properties.View = Me.GridView9
+        Me.SEIntSec.Size = New System.Drawing.Size(221, 20)
+        Me.SEIntSec.TabIndex = 197
         '
         'GridView9
         '
@@ -445,20 +450,22 @@ Partial Class FormSchedulerTimer
         Me.LabelControl11.TabIndex = 196
         Me.LabelControl11.Text = "Detik"
         '
-        'SearchLookUpEdit3
+        'SEIntMenit
         '
-        Me.SearchLookUpEdit3.Location = New System.Drawing.Point(12, 113)
-        Me.SearchLookUpEdit3.Name = "SearchLookUpEdit3"
-        Me.SearchLookUpEdit3.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.SearchLookUpEdit3.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Black
-        Me.SearchLookUpEdit3.Properties.AppearanceReadOnly.Options.UseBackColor = True
-        Me.SearchLookUpEdit3.Properties.AppearanceReadOnly.Options.UseForeColor = True
-        Me.SearchLookUpEdit3.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.SearchLookUpEdit3.Properties.NullText = ""
-        Me.SearchLookUpEdit3.Properties.ShowFooter = False
-        Me.SearchLookUpEdit3.Properties.View = Me.GridView8
-        Me.SearchLookUpEdit3.Size = New System.Drawing.Size(221, 20)
-        Me.SearchLookUpEdit3.TabIndex = 194
+        Me.SEIntMenit.Location = New System.Drawing.Point(12, 113)
+        Me.SEIntMenit.Name = "SEIntMenit"
+        Me.SEIntMenit.Properties.Appearance.Options.UseTextOptions = True
+        Me.SEIntMenit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+        Me.SEIntMenit.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.SEIntMenit.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Black
+        Me.SEIntMenit.Properties.AppearanceReadOnly.Options.UseBackColor = True
+        Me.SEIntMenit.Properties.AppearanceReadOnly.Options.UseForeColor = True
+        Me.SEIntMenit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.SEIntMenit.Properties.NullText = ""
+        Me.SEIntMenit.Properties.ShowFooter = False
+        Me.SEIntMenit.Properties.View = Me.GridView8
+        Me.SEIntMenit.Size = New System.Drawing.Size(221, 20)
+        Me.SEIntMenit.TabIndex = 194
         '
         'GridView8
         '
@@ -482,20 +489,22 @@ Partial Class FormSchedulerTimer
         Me.GridColumn14.Visible = True
         Me.GridColumn14.VisibleIndex = 0
         '
-        'SearchLookUpEdit2
+        'SEIntJam
         '
-        Me.SearchLookUpEdit2.Location = New System.Drawing.Point(12, 77)
-        Me.SearchLookUpEdit2.Name = "SearchLookUpEdit2"
-        Me.SearchLookUpEdit2.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.SearchLookUpEdit2.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Black
-        Me.SearchLookUpEdit2.Properties.AppearanceReadOnly.Options.UseBackColor = True
-        Me.SearchLookUpEdit2.Properties.AppearanceReadOnly.Options.UseForeColor = True
-        Me.SearchLookUpEdit2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.SearchLookUpEdit2.Properties.NullText = ""
-        Me.SearchLookUpEdit2.Properties.ShowFooter = False
-        Me.SearchLookUpEdit2.Properties.View = Me.GridView7
-        Me.SearchLookUpEdit2.Size = New System.Drawing.Size(221, 20)
-        Me.SearchLookUpEdit2.TabIndex = 195
+        Me.SEIntJam.Location = New System.Drawing.Point(12, 77)
+        Me.SEIntJam.Name = "SEIntJam"
+        Me.SEIntJam.Properties.Appearance.Options.UseTextOptions = True
+        Me.SEIntJam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+        Me.SEIntJam.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.SEIntJam.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Black
+        Me.SEIntJam.Properties.AppearanceReadOnly.Options.UseBackColor = True
+        Me.SEIntJam.Properties.AppearanceReadOnly.Options.UseForeColor = True
+        Me.SEIntJam.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.SEIntJam.Properties.NullText = ""
+        Me.SEIntJam.Properties.ShowFooter = False
+        Me.SEIntJam.Properties.View = Me.GridView7
+        Me.SEIntJam.Size = New System.Drawing.Size(221, 20)
+        Me.SEIntJam.TabIndex = 195
         '
         'GridView7
         '
@@ -548,7 +557,7 @@ Partial Class FormSchedulerTimer
         '
         'GroupControl2
         '
-        Me.GroupControl2.Controls.Add(Me.DateEdit1)
+        Me.GroupControl2.Controls.Add(Me.DEStart)
         Me.GroupControl2.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupControl2.Location = New System.Drawing.Point(0, 0)
         Me.GroupControl2.Name = "GroupControl2"
@@ -559,7 +568,7 @@ Partial Class FormSchedulerTimer
         'GroupControl3
         '
         Me.GroupControl3.Controls.Add(Me.LabelControl1)
-        Me.GroupControl3.Controls.Add(Me.SearchLookUpEdit1)
+        Me.GroupControl3.Controls.Add(Me.LEWeek)
         Me.GroupControl3.Controls.Add(Me.LabelControl7)
         Me.GroupControl3.Controls.Add(Me.LabelControl3)
         Me.GroupControl3.Controls.Add(Me.LEMonth)
@@ -586,20 +595,20 @@ Partial Class FormSchedulerTimer
         Me.LabelControl1.TabIndex = 184
         Me.LabelControl1.Text = "Minggu"
         '
-        'SearchLookUpEdit1
+        'LEWeek
         '
-        Me.SearchLookUpEdit1.Location = New System.Drawing.Point(78, 153)
-        Me.SearchLookUpEdit1.Name = "SearchLookUpEdit1"
-        Me.SearchLookUpEdit1.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.SearchLookUpEdit1.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Black
-        Me.SearchLookUpEdit1.Properties.AppearanceReadOnly.Options.UseBackColor = True
-        Me.SearchLookUpEdit1.Properties.AppearanceReadOnly.Options.UseForeColor = True
-        Me.SearchLookUpEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.SearchLookUpEdit1.Properties.NullText = ""
-        Me.SearchLookUpEdit1.Properties.ShowFooter = False
-        Me.SearchLookUpEdit1.Properties.View = Me.GridView6
-        Me.SearchLookUpEdit1.Size = New System.Drawing.Size(182, 20)
-        Me.SearchLookUpEdit1.TabIndex = 185
+        Me.LEWeek.Location = New System.Drawing.Point(78, 153)
+        Me.LEWeek.Name = "LEWeek"
+        Me.LEWeek.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LEWeek.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Black
+        Me.LEWeek.Properties.AppearanceReadOnly.Options.UseBackColor = True
+        Me.LEWeek.Properties.AppearanceReadOnly.Options.UseForeColor = True
+        Me.LEWeek.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.LEWeek.Properties.NullText = ""
+        Me.LEWeek.Properties.ShowFooter = False
+        Me.LEWeek.Properties.View = Me.GridView6
+        Me.LEWeek.Size = New System.Drawing.Size(182, 20)
+        Me.LEWeek.TabIndex = 185
         '
         'GridView6
         '
@@ -612,13 +621,13 @@ Partial Class FormSchedulerTimer
         'GridColumn9
         '
         Me.GridColumn9.Caption = "Hari"
-        Me.GridColumn9.FieldName = "value_dow"
+        Me.GridColumn9.FieldName = "value_week"
         Me.GridColumn9.Name = "GridColumn9"
         '
         'GridColumn10
         '
         Me.GridColumn10.Caption = "Hari"
-        Me.GridColumn10.FieldName = "display_dow"
+        Me.GridColumn10.FieldName = "display_week"
         Me.GridColumn10.Name = "GridColumn10"
         Me.GridColumn10.Visible = True
         Me.GridColumn10.VisibleIndex = 0
@@ -650,24 +659,24 @@ Partial Class FormSchedulerTimer
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LEMin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DateEdit1.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DateEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DEStart.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DEStart.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl1.ResumeLayout(False)
         Me.GroupControl1.PerformLayout()
-        CType(Me.SpinEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SearchLookUpEdit4.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SEIntDay.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SEIntSec.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SearchLookUpEdit3.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SEIntMenit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SearchLookUpEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SEIntJam.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl2.ResumeLayout(False)
         CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl3.ResumeLayout(False)
         Me.GroupControl3.PerformLayout()
-        CType(Me.SearchLookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LEWeek.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -700,19 +709,19 @@ Partial Class FormSchedulerTimer
     Friend WithEvents LabelControl5 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents LabelControl4 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents DateEdit1 As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents DEStart As DevExpress.XtraEditors.DateEdit
     Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
-    Friend WithEvents SpinEdit1 As DevExpress.XtraEditors.SpinEdit
-    Friend WithEvents SearchLookUpEdit4 As DevExpress.XtraEditors.SearchLookUpEdit
+    Friend WithEvents SEIntDay As DevExpress.XtraEditors.SpinEdit
+    Friend WithEvents SEIntSec As DevExpress.XtraEditors.SearchLookUpEdit
     Friend WithEvents GridView9 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents GridColumn15 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn16 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents LabelControl11 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents SearchLookUpEdit3 As DevExpress.XtraEditors.SearchLookUpEdit
+    Friend WithEvents SEIntMenit As DevExpress.XtraEditors.SearchLookUpEdit
     Friend WithEvents GridView8 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents GridColumn13 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn14 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents SearchLookUpEdit2 As DevExpress.XtraEditors.SearchLookUpEdit
+    Friend WithEvents SEIntJam As DevExpress.XtraEditors.SearchLookUpEdit
     Friend WithEvents GridView7 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents GridColumn11 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn12 As DevExpress.XtraGrid.Columns.GridColumn
@@ -722,7 +731,7 @@ Partial Class FormSchedulerTimer
     Friend WithEvents GroupControl2 As DevExpress.XtraEditors.GroupControl
     Friend WithEvents GroupControl3 As DevExpress.XtraEditors.GroupControl
     Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents SearchLookUpEdit1 As DevExpress.XtraEditors.SearchLookUpEdit
+    Friend WithEvents LEWeek As DevExpress.XtraEditors.SearchLookUpEdit
     Friend WithEvents GridView6 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents GridColumn9 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn10 As DevExpress.XtraGrid.Columns.GridColumn

@@ -553,6 +553,70 @@ Module MainModule
             'jika ada
         End If
     End Sub
+    Sub SE_load_status_aktif(ByRef SLE As DevExpress.XtraEditors.SearchLookUpEdit)
+        Dim query As String = "SELECT '1' AS id_status,'Aktif' AS status UNION SELECT '2' AS id_status,'Tidak Aktif' AS status"
+        Dim data As DataTable = execute_query(query, -1, True, "", "", "", "")
+
+        SLE.Properties.DataSource = Nothing
+        SLE.Properties.DataSource = data
+        SLE.Properties.DisplayMember = "id_status"
+        SLE.Properties.ValueMember = "status"
+        SLE.EditValue = data.Rows(0)(0).ToString
+    End Sub
+    Sub SE_load_intsec(ByRef SLE As DevExpress.XtraEditors.SearchLookUpEdit)
+        Dim query As String = "SELECT '0' AS value_sec,'0' AS display_sec"
+        Dim data As DataTable = execute_query(query, -1, True, "", "", "", "")
+
+        Dim dr As DataRow
+        For i As Integer = 1 To 59
+            dr = data.NewRow()
+            dr(0) = i.ToString
+            dr(1) = i.ToString
+            data.Rows.Add(dr)
+        Next
+
+        SLE.Properties.DataSource = Nothing
+        SLE.Properties.DataSource = data
+        SLE.Properties.DisplayMember = "display_sec"
+        SLE.Properties.ValueMember = "value_sec"
+        SLE.EditValue = data.Rows(0)(0).ToString
+    End Sub
+    Sub SE_load_intmin(ByRef SLE As DevExpress.XtraEditors.SearchLookUpEdit)
+        Dim query As String = "SELECT '0' AS value_min,'0' AS display_min"
+        Dim data As DataTable = execute_query(query, -1, True, "", "", "", "")
+
+        Dim dr As DataRow
+        For i As Integer = 1 To 59
+            dr = data.NewRow()
+            dr(0) = i.ToString
+            dr(1) = i.ToString
+            data.Rows.Add(dr)
+        Next
+
+        SLE.Properties.DataSource = Nothing
+        SLE.Properties.DataSource = data
+        SLE.Properties.DisplayMember = "display_min"
+        SLE.Properties.ValueMember = "value_min"
+        SLE.EditValue = data.Rows(0)(0).ToString
+    End Sub
+    Sub SE_load_inthr(ByRef SLE As DevExpress.XtraEditors.SearchLookUpEdit)
+        Dim query As String = "SELECT '0' AS value_hour,'0' AS display_hour"
+        Dim data As DataTable = execute_query(query, -1, True, "", "", "", "")
+
+        Dim dr As DataRow
+        For i As Integer = 1 To 23
+            dr = data.NewRow()
+            dr(0) = i.ToString
+            dr(1) = i.ToString
+            data.Rows.Add(dr)
+        Next
+
+        SLE.Properties.DataSource = Nothing
+        SLE.Properties.DataSource = data
+        SLE.Properties.DisplayMember = "display_hour"
+        SLE.Properties.ValueMember = "value_hour"
+        SLE.EditValue = data.Rows(0)(0).ToString
+    End Sub
     Sub SE_load_min(ByRef SLE As DevExpress.XtraEditors.SearchLookUpEdit)
         Dim query As String = "SELECT '*' AS value_min,'Semua menit' AS display_min"
         Dim data As DataTable = execute_query(query, -1, True, "", "", "", "")
@@ -609,6 +673,26 @@ Module MainModule
         SLE.EditValue = data.Rows(0)(0).ToString
  
     End Sub
+    Sub SE_load_week(ByRef SLE As DevExpress.XtraEditors.SearchLookUpEdit)
+
+        Dim query As String = "SELECT '*' AS value_week,'Semua minggu' AS display_week"
+        Dim data As DataTable = execute_query(query, -1, True, "", "", "", "")
+
+        Dim dr As DataRow
+        For i As Integer = 1 To 5
+            dr = data.NewRow()
+            dr(0) = i.ToString
+            dr(1) = i.ToString
+            data.Rows.Add(dr)
+        Next
+
+        SLE.Properties.DataSource = Nothing
+        SLE.Properties.DataSource = data
+        SLE.Properties.DisplayMember = "display_week"
+        SLE.Properties.ValueMember = "value_week"
+        SLE.EditValue = data.Rows(0)(0).ToString
+
+    End Sub
     Sub SE_load_month(ByRef SLE As DevExpress.XtraEditors.SearchLookUpEdit)
         Dim query As String = "SELECT '*' AS value_month,'Semua bulan' AS display_month"
         Dim data As DataTable = execute_query(query, -1, True, "", "", "", "")
@@ -662,4 +746,22 @@ Module MainModule
         SLE.Properties.ValueMember = "id_status"
         SLE.EditValue = data.Rows(0)(0).ToString
     End Sub
+    Function find_row(ByVal gridview As DevExpress.XtraGrid.Views.Grid.GridView, ByVal col_name As String, ByVal value_s As String) As Integer
+        Dim index As Integer
+
+        index = 0
+        gridview.ExpandAllGroups()
+        gridview.ApplyFindFilter("")
+        gridview.ClearColumnsFilter()
+        gridview.ActiveFilter.Clear()
+        For i As Integer = 0 To gridview.RowCount - 1
+            If gridview.GetRowCellValue(i, col_name).ToString = value_s Then
+                index = i
+                'gridview.CollapseAllGroups()
+                Exit For
+            End If
+        Next
+        gridview.MakeRowVisible(index)
+        Return index
+    End Function
 End Module

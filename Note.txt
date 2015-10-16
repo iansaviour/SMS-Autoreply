@@ -30,7 +30,7 @@ id_sms,output_sms
 
 WORK :
 
-V delete and new kontak
+- delete and new kontak
 - scheduler master
 - scheduler ada tiga bagian :
 nama event deskripsi dkk, event looping timenya pisah (schedule), eventnya yang mau dikerjakan (SMS, nomor yang dituju)
