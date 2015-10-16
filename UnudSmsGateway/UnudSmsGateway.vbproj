@@ -354,6 +354,12 @@
     <Compile Include="Lib\FormSchedulerAdd.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Lib\FormSchedulerTimer.Designer.vb">
+      <DependentUpon>FormSchedulerTimer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\FormSchedulerTimer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Lib\Koneksi.vb" />
     <Compile Include="Lib\MainModule.vb" />
     <Compile Include="FormSMS.Designer.vb">
@@ -546,6 +552,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lib\FormSchedulerAdd.resx">
       <DependentUpon>FormSchedulerAdd.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lib\FormSchedulerTimer.resx">
+      <DependentUpon>FormSchedulerTimer.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
